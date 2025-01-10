@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://rlgli5g43yvd"]
+
+[ext_resource type="Script" path="res://start.gd" id="1_d1kij"]
+[ext_resource type="FontFile" uid="uid://biga76a2ve0nh" path="res://Jersey15-Regular.ttf" id="2_um143"]
+[ext_resource type="AudioStream" uid="uid://1lr75srrmvdk" path="res://Sound Effects/MyVoice.mp3" id="2_ynlh2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gp70l"]
+font = ExtResource("2_um143")
+font_size = 49
+shadow_color = Color(0, 0, 0, 0.741176)
+
+[node name="Start" type="Node2D"]
+script = ExtResource("1_d1kij")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1146.0
+offset_bottom = 657.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = -2.0
+offset_right = 1149.0
+offset_bottom = 655.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Not every game must haunt the soul,
+Not every creature plays the enemy's role.
+
+You dreamed of a garden, wild and free,
+Where peace blooms under every tree.
+A haven to wander, to laugh, to play,
+Where shadows of worry melt away.
+
+This is the place where dreams unfold,
+A refuge from a world so cold.
+To flee from reality, just let it be—
+Here, you’ll find the life you seek, endlessly."
+label_settings = SubResource("LabelSettings_gp70l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ynlh2")
+volume_db = 10.024
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

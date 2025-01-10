@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bfam3l24ekn07"
+path="res://.godot/imported/footstep04.ogg-cf284e36cff07634a6af3e4667b13a5b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sound Effects/Footsteps/footstep04.ogg"
+dest_files=["res://.godot/imported/footstep04.ogg-cf284e36cff07634a6af3e4667b13a5b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
